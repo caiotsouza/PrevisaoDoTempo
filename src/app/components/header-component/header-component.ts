@@ -1,0 +1,12 @@
+import { Component } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+
+@Component({
+  selector: 'app-header-component',
+  imports: [ MatCardModule ],
+  templateUrl: './header-component.html',
+  styleUrl: './header-component.css'
+})
+export class HeaderComponent {
+
+}
