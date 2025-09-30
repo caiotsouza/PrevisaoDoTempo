@@ -1,7 +1,9 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MainComponent } from './components/main-component/main-component';
 import { HeaderComponent } from './components/header-component/header-component';
+import { WEATHER_PREDICTION } from './type';
+import { AppComponentService } from './app.component.service';
 
 
 @Component({
@@ -11,5 +13,5 @@ import { HeaderComponent } from './components/header-component/header-component'
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('PrevisaoDoTempo');
+
 }

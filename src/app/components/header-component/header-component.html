@@ -3,18 +3,17 @@
         <div class="input">
             <mat-form-field class="form-input">
                 <mat-label>Nome da Cidade</mat-label>
-                <input matInput placeholder="Digite uma cidade" value="">
+                <input matInput placeholder="Digite uma cidade" #inputValue>
             </mat-form-field>
-            <button class="search" matFab aria-label="">
+            <button (click)="searchText(inputValue.value)" class="search" matFab aria-label="">
                 <mat-icon>search</mat-icon>
             </button>
         </div>
-        <h1>Cidade</h1>
-        <h2>Data Dia Atual</h2>
-        <h3>Condição atual</h3><h3>Temperatura Mínima</h3><h3>Temperatura Maxima</h3>
-        <p>Data Segundo Dia</p>
-        <p>Condição atual</p><p>Temperatura Mínima</p><p>Temperatura Maxima</p>
-        <p>Data Terceiro Dia</p>
-        <p>Condição atual</p><p>Temperatura Mínima</p><p>Temperatura Maxima</p>
+        <mat-icon>cloud</mat-icon>
+        <h1>{{weatherPrediction.name}}</h1>
+        <h3>{{weatherPrediction.date}}</h3>
+        <p>{{weatherPrediction.description}}</p>
+        <p>Máximas de: {{weatherPrediction.maxTemperature}} °C</p>
+        <p>Mínimo de: {{weatherPrediction.minTemperature}} °C</p>
     </div>
 </main>
